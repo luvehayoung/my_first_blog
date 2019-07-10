@@ -1,0 +1,12 @@
+{% extends 'first_app/base.html' %}
+
+{% block content %}
+<h1>여기가 새로만든 앱의 새로운 시작페이지 입니다.</h1>
+
+<a href = "{% url 'post_list'%}">내가 만든 게시글 보기</a>
+
+
+<p></p>
+
+<a href = "{% url 'index'%}">원래대로 돌아가기</a>
+{% endblock %}

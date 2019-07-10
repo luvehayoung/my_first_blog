@@ -1,0 +1,49 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+
+    <title>지도표시하</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!--<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=l2xe9uu7x5&amp;submodules=geocoder"></script>-->
+</head>
+
+<body>
+
+<!--
+<h1>index.html을 여기에 복붙하고, 여기는 base.html부분입니다. 여기서 이제 html 작업을 하는 것입니다. 여기서 계속 사용할 부분만 코딩해서 넣습니다. </h1>
+<img src="{% static "image/download.jpeg" %}" alt="My image">
+-->
+
+<header>
+    <h1><a href="/">내 사이트</a></h1>
+</header>
+
+
+<!--
+<div id="map1" style="width:100%;height:400px;"></div>
+var mapOptions = {
+    center: new naver.maps.LatLng(37.3595704, 127.105399),
+    zoom: 10
+};
+
+var map = new naver.maps.Map('map1', mapOptions);
+
+-->
+
+
+<div class = "main">
+{% block content %}
+
+
+
+{% endblock %}
+</div>
+
+
+<footer>푸터입니다</footer>
+</body>
+</html>

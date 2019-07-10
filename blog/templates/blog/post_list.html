@@ -1,0 +1,11 @@
+{% extends 'first_app/base.html' %}
+
+{% block content %}
+<h1>여기서 내가 만든 게시글들의 리스트를 보이게 합니다</h1>
+
+{% for post in posts %}
+    {{ post }}
+    {{ post.title }}
+{% endfor %}
+
+{% endblock %}
