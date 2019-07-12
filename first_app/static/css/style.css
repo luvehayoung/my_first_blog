@@ -8,7 +8,7 @@ header{
 }
 
 .main{
-    height:400px;
+    /*height:400px;*/
     background-color:blue;
     color:white;
 
@@ -16,7 +16,7 @@ header{
 footer{
     background-color:gray;
     height:100px;
-    position:absolute;
+    /*position:absolute;*/
     width:100%;
-    bottom:0;
+    /*bottom:0;*/
 }

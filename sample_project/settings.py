@@ -40,6 +40,17 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'first_app',
     'blog',
+
+    #여기서 부터 추가
+    'django.contrib.sites',
+
+    #allauth
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+
+    #provider
+    'allauth.socialaccount.providers.google'
 ]
 
 MIDDLEWARE = [
@@ -124,3 +135,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = ( os.path.join('static'), )
+
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
+
+SITE_ID = 1
+LOGIN_REDIRECT_URL = '/'

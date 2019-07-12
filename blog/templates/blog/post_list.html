@@ -2,10 +2,14 @@
 
 {% block content %}
 <h1>여기서 내가 만든 게시글들의 리스트를 보이게 합니다</h1>
+<h1><a href="{% url 'login' %}">로그인하기</a></h1>
 
 {% for post in posts %}
-    {{ post }}
-    {{ post.title }}
+    <div style="border: solid 1px black;">
+        <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title}}</a></h1>
+        <p>published: {{ post.published_date|linebreaksbr}}</p>
+    </div>
 {% endfor %}
 
+<h1><a href="{% url 'post_new' %}">새로운 글쓰기</a></h1>
 {% endblock %}
